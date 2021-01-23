@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Prices">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element maxOccurs="unbounded" ref="Record"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="Record">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="DATE"/>
+                <xs:element ref="DAILY_PRICE"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+    <xs:element name="DATE" type="xs:dateTime"/>
+    <xs:element name="DAILY_PRICE" type="xs:decimal"/>
+</xs:schema>
